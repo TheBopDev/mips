@@ -1,0 +1,18 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/home/josh/school/ece4120/final_proj/p3pipeline/JUMP_SHIFT.vhdl}
+vcom -93 -work work {/home/josh/school/ece4120/final_proj/p3pipeline/SEX.vhdl}
+vcom -93 -work work {/home/josh/school/ece4120/final_proj/p3pipeline/PIPELINE_REG.vhdl}
+vcom -93 -work work {/home/josh/school/ece4120/final_proj/p3pipeline/PC_ADD4.vhdl}
+vcom -93 -work work {/home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl}
+vcom -93 -work work {/home/josh/school/ece4120/final_proj/p3pipeline/CTRL_UNIT.vhdl}
+vcom -93 -work work {/home/josh/school/ece4120/final_proj/p3pipeline/ALU_CTRL.vhdl}
+vcom -93 -work work {/home/josh/school/ece4120/final_proj/p3pipeline/ALU.vhdl}
+vcom -93 -work work {/home/josh/school/ece4120/final_proj/p3pipeline/IMEM.vhd}
+vcom -93 -work work {/home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl}
+

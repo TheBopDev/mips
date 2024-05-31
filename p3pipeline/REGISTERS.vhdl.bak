@@ -1,0 +1,63 @@
+-- Registers file
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+
+
+entity REGISTERS is
+    port(
+        CLK : in STD_LOGIC;
+        C : in STD_LOGIC_vector(31 downto 0);
+        WriteData : in STD_LOGIC_VECTOR(31 downto 0);
+        RSData : out STD_LOGIC_VECTOR(31 downto 0);
+        RTData : out STD_LOGIC_VECTOR(31 downto 0);
+        RS : in std_logic_vector(4 downto 0);
+        RT : in std_logic_vector(4 downto 0);
+        RD : in std_logic_vector(4 downto 0)
+    );
+end REGISTERS;
+
+
+
+architecture Behavioral of REGISTERS is
+
+    type vector is array (0 to 31) of STD_LOGIC_VECTOR(31 downto 0);
+    signal Registers : vector;
+
+    signal RSsel : integer range 0 to 31;
+    signal RTsel : integer range 0 to 31;
+    signal RDsel : integer range 0 to 31;
+
+begin
+
+    RSsel <= to_integer(unsigned(RS));
+    RTsel <= to_integer(unsigned(RT));
+    RDsel <= to_integer(unsigned(RD));
+
+
+
+    ReadProcess : process(CLK)
+    begin
+        if (falling_edge(CLK)) then
+            RSData <= Registers(RSsel);
+            RTData <= Registers(RTsel);
+        end if;
+
+    end process;
+
+
+    WriteProcess : process(CLK)
+    begin
+        if (rising_edge(CLK)) then
+            for i in 0 to 31 loop
+                if (C(i) = '1') then
+                    Registers(i) <= WriteData;
+                end if;
+            end loop;
+        end if;
+    end process;
+
+
+end architecture;

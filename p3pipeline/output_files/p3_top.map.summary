@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Tue Apr 25 18:08:26 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : p3_top
+Top-level Entity Name : P3_top
+Family : MAX 10
+Total logic elements : 3,105
+    Total combinational functions : 1,934
+    Dedicated logic registers : 1,382
+Total registers : 1382
+Total pins : 240
+Total virtual pins : 0
+Total memory bits : 8,192
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

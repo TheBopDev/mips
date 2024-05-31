@@ -1,0 +1,1598 @@
+Analysis & Synthesis report for p3_top
+Tue Apr 25 18:08:26 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. User-Specified and Inferred Latches
+ 11. Logic Cells Representing Combinational Loops
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for IMEM:DUT_IMEM|altsyncram:altsyncram_component|altsyncram_jvp3:auto_generated
+ 16. Parameter Settings for User Entity Instance: EXMEM_REG:DUT_EX_MEM_REG
+ 17. Parameter Settings for User Entity Instance: IMEM:DUT_IMEM|altsyncram:altsyncram_component
+ 18. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG
+ 19. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:0:REGX
+ 20. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:1:REGX
+ 21. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:2:REGX
+ 22. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:3:REGX
+ 23. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:4:REGX
+ 24. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:5:REGX
+ 25. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:6:REGX
+ 26. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:7:REGX
+ 27. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:8:REGX
+ 28. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:9:REGX
+ 29. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:10:REGX
+ 30. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:11:REGX
+ 31. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:12:REGX
+ 32. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:13:REGX
+ 33. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:14:REGX
+ 34. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:15:REGX
+ 35. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:16:REGX
+ 36. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:17:REGX
+ 37. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:18:REGX
+ 38. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:19:REGX
+ 39. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:20:REGX
+ 40. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:21:REGX
+ 41. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:22:REGX
+ 42. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:23:REGX
+ 43. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:24:REGX
+ 44. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:25:REGX
+ 45. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:26:REGX
+ 46. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:27:REGX
+ 47. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:28:REGX
+ 48. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:29:REGX
+ 49. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:30:REGX
+ 50. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:31:REGX
+ 51. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|MUX32:DUT_READREG1_MUX
+ 52. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|MUX32:DUT_READREG2_MUX
+ 53. Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|DECODER:DUT_DECODER
+ 54. Parameter Settings for User Entity Instance: PL_ALU_CTRL:DUT_ALU_CONTROL
+ 55. Parameter Settings for User Entity Instance: ALU:DUT_ALU
+ 56. Parameter Settings for User Entity Instance: MUX3:DUT_ALU_IN0_MUX
+ 57. Parameter Settings for User Entity Instance: MUX2:DUT_ALU_IN1_MUX
+ 58. Parameter Settings for User Entity Instance: SEX:DUT_SEX
+ 59. Parameter Settings for User Entity Instance: PL_WB_MUX:DUT_WB_MUX
+ 60. Parameter Settings for User Entity Instance: BRANCH_ADDER:DUT_BRANCH_ADDER
+ 61. Parameter Settings for User Entity Instance: MUX2:DUT_JUMP_MUX
+ 62. Parameter Settings for User Entity Instance: REG_DST_MUX:DUT_RegDst_MUX
+ 63. Parameter Settings for User Entity Instance: PC:DUT_PC
+ 64. altsyncram Parameter Settings by Entity Instance
+ 65. Port Connectivity Checks: "CREATE_STALL:DUT_STALL"
+ 66. Port Connectivity Checks: "PC_ADD4:DUT_PC_ADD4"
+ 67. Port Connectivity Checks: "BRANCH_ADDER:DUT_BRANCH_ADDER"
+ 68. Port Connectivity Checks: "MEMWB_REG:DUT_MEM_WB_REG"
+ 69. Port Connectivity Checks: "EXMEM_REG:DUT_EX_MEM_REG"
+ 70. Port Connectivity Checks: "DEEX_REG:DUT_DE_EX_REG"
+ 71. Post-Synthesis Netlist Statistics for Top Partition
+ 72. Elapsed Time Per Partition
+ 73. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Apr 25 18:08:26 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; p3_top                                      ;
+; Top-level Entity Name              ; P3_top                                      ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 3,105                                       ;
+;     Total combinational functions  ; 1,934                                       ;
+;     Dedicated logic registers      ; 1,382                                       ;
+; Total registers                    ; 1382                                        ;
+; Total pins                         ; 240                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 8,192                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; p3_top             ; p3_top             ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
+; REG_DST_MUX.vhdl                 ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/REG_DST_MUX.vhdl          ;         ;
+; PL_ALU_CTRL.vhdl                 ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl          ;         ;
+; PL_WB_MUX.vhdl                   ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/PL_WB_MUX.vhdl            ;         ;
+; PL_BRANCH_MUX.vhdl               ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/PL_BRANCH_MUX.vhdl        ;         ;
+; MEMWB_REG.vhdl                   ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/MEMWB_REG.vhdl            ;         ;
+; EXMEM_REG.vhdl                   ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/EXMEM_REG.vhdl            ;         ;
+; DEEX_REG.vhdl                    ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/DEEX_REG.vhdl             ;         ;
+; IFDE_REG.vhdl                    ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/IFDE_REG.vhdl             ;         ;
+; CREATE_STALL.vhdl                ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl         ;         ;
+; HAZARD_UNIT.vhdl                 ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/HAZARD_UNIT.vhdl          ;         ;
+; BRANCH_ADDER.vhdl                ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/BRANCH_ADDER.vhdl         ;         ;
+; MUX3.vhdl                        ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl                 ;         ;
+; AND2BIT.vhdl                     ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/AND2BIT.vhdl              ;         ;
+; DECODER.vhdl                     ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/DECODER.vhdl              ;         ;
+; MUX32.vhdl                       ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/MUX32.vhdl                ;         ;
+; GEN_REG.vhdl                     ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/GEN_REG.vhdl              ;         ;
+; REGISTERS.vhdl                   ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/REGISTERS.vhdl            ;         ;
+; JUMP_SHIFT.vhdl                  ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/JUMP_SHIFT.vhdl           ;         ;
+; SEX.vhdl                         ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/SEX.vhdl                  ;         ;
+; PC_ADD4.vhdl                     ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/PC_ADD4.vhdl              ;         ;
+; PC.vhdl                          ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/PC.vhdl                   ;         ;
+; P3_top.vhdl                      ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl               ;         ;
+; MUX2.vhdl                        ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl                 ;         ;
+; FWD_UNIT.vhdl                    ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/FWD_UNIT.vhdl             ;         ;
+; CTRL_UNIT.vhdl                   ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/CTRL_UNIT.vhdl            ;         ;
+; ALU.vhdl                         ; yes             ; User VHDL File                         ; /home/josh/school/ece4120/final_proj/p3pipeline/ALU.vhdl                  ;         ;
+; IMEM.vhd                         ; yes             ; User Wizard-Generated File             ; /home/josh/school/ece4120/final_proj/p3pipeline/IMEM.vhd                  ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; /opt/intelFPGA/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /opt/intelFPGA/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; /opt/intelFPGA/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; /opt/intelFPGA/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                           ; /opt/intelFPGA/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /opt/intelFPGA/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; /opt/intelFPGA/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; /opt/intelFPGA/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; /opt/intelFPGA/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_jvp3.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/josh/school/ece4120/final_proj/p3pipeline/db/altsyncram_jvp3.tdf    ;         ;
+; IMEM.mif                         ; yes             ; Auto-Found Memory Initialization File  ; /home/josh/school/ece4120/final_proj/p3pipeline/IMEM.mif                  ;         ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 3,105     ;
+;                                             ;           ;
+; Total combinational functions               ; 1934      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 1573      ;
+;     -- 3 input functions                    ; 319       ;
+;     -- <=2 input functions                  ; 42        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 1814      ;
+;     -- arithmetic mode                      ; 120       ;
+;                                             ;           ;
+; Total registers                             ; 1382      ;
+;     -- Dedicated logic registers            ; 1382      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 240       ;
+; Total memory bits                           ; 8192      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 1414      ;
+; Total fan-out                               ; 11940     ;
+; Average fan-out                             ; 3.12      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                    ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                  ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+-----------------+--------------+
+; |P3_top                                   ; 1934 (2)            ; 1382 (0)                  ; 8192        ; 0          ; 0            ; 0       ; 0         ; 240  ; 0            ; 0          ; |P3_top                                                                              ; P3_top          ; work         ;
+;    |ALU:DUT_ALU|                          ; 175 (175)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|ALU:DUT_ALU                                                                  ; ALU             ; work         ;
+;    |BRANCH_ADDER:DUT_BRANCH_ADDER|        ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|BRANCH_ADDER:DUT_BRANCH_ADDER                                                ; BRANCH_ADDER    ; work         ;
+;    |CREATE_STALL:DUT_STALL|               ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|CREATE_STALL:DUT_STALL                                                       ; CREATE_STALL    ; work         ;
+;    |CTRL_UNIT:DUT_CTRL_UNIT|              ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|CTRL_UNIT:DUT_CTRL_UNIT                                                      ; CTRL_UNIT       ; work         ;
+;    |DEEX_REG:DUT_DE_EX_REG|               ; 0 (0)               ; 153 (153)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|DEEX_REG:DUT_DE_EX_REG                                                       ; DEEX_REG        ; work         ;
+;    |EXMEM_REG:DUT_EX_MEM_REG|             ; 0 (0)               ; 71 (71)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|EXMEM_REG:DUT_EX_MEM_REG                                                     ; EXMEM_REG       ; work         ;
+;    |FWD_UNIT:DUT_FWD|                     ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|FWD_UNIT:DUT_FWD                                                             ; FWD_UNIT        ; work         ;
+;    |HAZARD_UNIT:DUT_HAZARD|               ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|HAZARD_UNIT:DUT_HAZARD                                                       ; HAZARD_UNIT     ; work         ;
+;    |IFDE_REG:DUT_IF_DE_REG|               ; 0 (0)               ; 64 (64)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|IFDE_REG:DUT_IF_DE_REG                                                       ; IFDE_REG        ; work         ;
+;    |IMEM:DUT_IMEM|                        ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|IMEM:DUT_IMEM                                                                ; IMEM            ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|IMEM:DUT_IMEM|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;          |altsyncram_jvp3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|IMEM:DUT_IMEM|altsyncram:altsyncram_component|altsyncram_jvp3:auto_generated ; altsyncram_jvp3 ; work         ;
+;    |MEMWB_REG:DUT_MEM_WB_REG|             ; 0 (0)               ; 38 (38)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|MEMWB_REG:DUT_MEM_WB_REG                                                     ; MEMWB_REG       ; work         ;
+;    |MUX2:DUT_ALU_IN1_MUX|                 ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|MUX2:DUT_ALU_IN1_MUX                                                         ; MUX2            ; work         ;
+;    |MUX2:DUT_JUMP_MUX|                    ; 88 (88)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|MUX2:DUT_JUMP_MUX                                                            ; MUX2            ; work         ;
+;    |MUX3:DUT_ALU_IN0_MUX|                 ; 66 (66)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|MUX3:DUT_ALU_IN0_MUX                                                         ; MUX3            ; work         ;
+;    |PC:DUT_PC|                            ; 5 (5)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|PC:DUT_PC                                                                    ; PC              ; work         ;
+;    |PC_ADD4:DUT_PC_ADD4|                  ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|PC_ADD4:DUT_PC_ADD4                                                          ; PC_ADD4         ; work         ;
+;    |PL_ALU_CTRL:DUT_ALU_CONTROL|          ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|PL_ALU_CTRL:DUT_ALU_CONTROL                                                  ; PL_ALU_CTRL     ; work         ;
+;    |PL_WB_MUX:DUT_WB_MUX|                 ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|PL_WB_MUX:DUT_WB_MUX                                                         ; PL_WB_MUX       ; work         ;
+;    |REGISTERS:DUT_REG|                    ; 1384 (0)            ; 1024 (0)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG                                                            ; REGISTERS       ; work         ;
+;       |DECODER:DUT_DECODER|               ; 40 (40)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|DECODER:DUT_DECODER                                        ; DECODER         ; work         ;
+;       |GEN_REG:\GEN_INS:0:REGX|           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:0:REGX                                    ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:10:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:10:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:11:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:11:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:12:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:12:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:13:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:13:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:14:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:14:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:15:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:15:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:16:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:16:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:17:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:17:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:18:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:18:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:19:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:19:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:1:REGX|           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:1:REGX                                    ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:20:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:20:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:21:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:21:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:22:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:22:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:23:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:23:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:24:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:24:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:25:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:25:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:26:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:26:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:27:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:27:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:28:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:28:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:29:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:29:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:2:REGX|           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:2:REGX                                    ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:30:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:30:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:31:REGX|          ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:31:REGX                                   ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:3:REGX|           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:3:REGX                                    ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:4:REGX|           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:4:REGX                                    ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:5:REGX|           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:5:REGX                                    ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:6:REGX|           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:6:REGX                                    ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:7:REGX|           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:7:REGX                                    ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:8:REGX|           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:8:REGX                                    ; GEN_REG         ; work         ;
+;       |GEN_REG:\GEN_INS:9:REGX|           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|GEN_REG:\GEN_INS:9:REGX                                    ; GEN_REG         ; work         ;
+;       |MUX32:DUT_READREG1_MUX|            ; 672 (672)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|MUX32:DUT_READREG1_MUX                                     ; MUX32           ; work         ;
+;       |MUX32:DUT_READREG2_MUX|            ; 672 (672)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REGISTERS:DUT_REG|MUX32:DUT_READREG2_MUX                                     ; MUX32           ; work         ;
+;    |REG_DST_MUX:DUT_RegDst_MUX|           ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|REG_DST_MUX:DUT_RegDst_MUX                                                   ; REG_DST_MUX     ; work         ;
+;    |SEX:DUT_SEX|                          ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |P3_top|SEX:DUT_SEX                                                                  ; SEX             ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                           ;
++-----------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------+
+; Name                                                                                    ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF      ;
++-----------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------+
+; IMEM:DUT_IMEM|altsyncram:altsyncram_component|altsyncram_jvp3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 32           ; --           ; --           ; 8192 ; IMEM.mif ;
++-----------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                   ;
++--------+--------------+---------+--------------+--------------+-----------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance       ; IP Include File ;
++--------+--------------+---------+--------------+--------------+-----------------------+-----------------+
+; Altera ; RAM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |P3_top|IMEM:DUT_IMEM ; IMEM.vhd        ;
++--------+--------------+---------+--------------+--------------+-----------------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                      ;
++----------------------------------------------------+--------------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                        ; Free of Timing Hazards ;
++----------------------------------------------------+--------------------------------------------+------------------------+
+; PL_ALU_CTRL:DUT_ALU_CONTROL|ALU_CONTROL[1]         ; PL_ALU_CTRL:DUT_ALU_CONTROL|ALU_CONTROL[3] ; yes                    ;
+; PL_ALU_CTRL:DUT_ALU_CONTROL|ALU_CONTROL[0]         ; PL_ALU_CTRL:DUT_ALU_CONTROL|ALU_CONTROL[3] ; yes                    ;
+; PL_ALU_CTRL:DUT_ALU_CONTROL|ALU_CONTROL[2]         ; PL_ALU_CTRL:DUT_ALU_CONTROL|ALU_CONTROL[3] ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                                            ;                        ;
++----------------------------------------------------+--------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                ;
++--------------------------------------------------------+----+
+; Logic Cell Name                                        ;    ;
++--------------------------------------------------------+----+
+; ALU:DUT_ALU|Mux1~0                                     ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[14]~16                     ;    ;
+; ALU:DUT_ALU|Add0~16                                    ;    ;
+; ALU:DUT_ALU|Add1~15                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[0]~30                      ;    ;
+; ALU:DUT_ALU|Add0~30                                    ;    ;
+; ALU:DUT_ALU|Add1~29                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[1]~29                      ;    ;
+; ALU:DUT_ALU|Add0~29                                    ;    ;
+; ALU:DUT_ALU|Add1~28                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[2]~28                      ;    ;
+; ALU:DUT_ALU|Add0~28                                    ;    ;
+; ALU:DUT_ALU|Add1~27                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[3]~27                      ;    ;
+; ALU:DUT_ALU|Add0~27                                    ;    ;
+; ALU:DUT_ALU|Add1~26                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[4]~26                      ;    ;
+; ALU:DUT_ALU|Add0~26                                    ;    ;
+; ALU:DUT_ALU|Add1~25                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[5]~25                      ;    ;
+; ALU:DUT_ALU|Add0~25                                    ;    ;
+; ALU:DUT_ALU|Add1~24                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[6]~24                      ;    ;
+; ALU:DUT_ALU|Add0~24                                    ;    ;
+; ALU:DUT_ALU|Add1~23                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[7]~23                      ;    ;
+; ALU:DUT_ALU|Add0~23                                    ;    ;
+; ALU:DUT_ALU|Add1~22                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[8]~22                      ;    ;
+; ALU:DUT_ALU|Add0~22                                    ;    ;
+; ALU:DUT_ALU|Add1~21                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[9]~21                      ;    ;
+; ALU:DUT_ALU|Add0~21                                    ;    ;
+; ALU:DUT_ALU|Add1~20                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[10]~20                     ;    ;
+; ALU:DUT_ALU|Add0~20                                    ;    ;
+; ALU:DUT_ALU|Add1~19                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[11]~19                     ;    ;
+; ALU:DUT_ALU|Add0~19                                    ;    ;
+; ALU:DUT_ALU|Add1~18                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[12]~18                     ;    ;
+; ALU:DUT_ALU|Add0~18                                    ;    ;
+; ALU:DUT_ALU|Add1~17                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[13]~17                     ;    ;
+; ALU:DUT_ALU|Add0~17                                    ;    ;
+; ALU:DUT_ALU|Add1~16                                    ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[30]~0                      ;    ;
+; ALU:DUT_ALU|Add0~0                                     ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[29]~1                      ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[28]~2                      ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[27]~3                      ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[26]~4                      ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[25]~5                      ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[24]~6                      ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[23]~7                      ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[22]~8                      ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[21]~9                      ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[20]~10                     ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[19]~11                     ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[18]~12                     ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[17]~13                     ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[16]~14                     ;    ;
+; MUX3:DUT_ALU_IN0_MUX|OUTPUT[15]~15                     ;    ;
+; ALU:DUT_ALU|Add0~15                                    ;    ;
+; ALU:DUT_ALU|Add1~14                                    ;    ;
+; ALU:DUT_ALU|Add0~14                                    ;    ;
+; ALU:DUT_ALU|Add1~13                                    ;    ;
+; ALU:DUT_ALU|Add0~13                                    ;    ;
+; ALU:DUT_ALU|Add1~12                                    ;    ;
+; ALU:DUT_ALU|Add0~12                                    ;    ;
+; ALU:DUT_ALU|Add1~11                                    ;    ;
+; ALU:DUT_ALU|Add0~11                                    ;    ;
+; ALU:DUT_ALU|Add1~10                                    ;    ;
+; ALU:DUT_ALU|Add0~10                                    ;    ;
+; ALU:DUT_ALU|Add1~9                                     ;    ;
+; ALU:DUT_ALU|Add0~9                                     ;    ;
+; ALU:DUT_ALU|Add1~8                                     ;    ;
+; ALU:DUT_ALU|Add0~8                                     ;    ;
+; ALU:DUT_ALU|Add1~7                                     ;    ;
+; ALU:DUT_ALU|Add0~7                                     ;    ;
+; ALU:DUT_ALU|Add1~6                                     ;    ;
+; ALU:DUT_ALU|Add0~6                                     ;    ;
+; ALU:DUT_ALU|Add1~5                                     ;    ;
+; ALU:DUT_ALU|Add0~5                                     ;    ;
+; ALU:DUT_ALU|Add1~4                                     ;    ;
+; ALU:DUT_ALU|Add0~4                                     ;    ;
+; ALU:DUT_ALU|Add1~3                                     ;    ;
+; ALU:DUT_ALU|Add0~3                                     ;    ;
+; ALU:DUT_ALU|Add1~2                                     ;    ;
+; ALU:DUT_ALU|Add0~2                                     ;    ;
+; ALU:DUT_ALU|Add1~1                                     ;    ;
+; ALU:DUT_ALU|Add0~1                                     ;    ;
+; ALU:DUT_ALU|Add1~0                                     ;    ;
+; Number of logic cells representing combinational loops ; 93 ;
++--------------------------------------------------------+----+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                       ;
++--------------------------------------------------+-------------------------------------------------------+
+; Register name                                    ; Reason for Removal                                    ;
++--------------------------------------------------+-------------------------------------------------------+
+; DEEX_REG:DUT_DE_EX_REG|DE_EX_RegDst_OUT          ; Merged with DEEX_REG:DUT_DE_EX_REG|DE_EX_ALUOp_OUT[1] ;
+; MEMWB_REG:DUT_MEM_WB_REG|MEM_WB_DMEM_OUT[0..28]  ; Stuck at GND due to stuck port data_in                ;
+; MEMWB_REG:DUT_MEM_WB_REG|MEM_WB_MemToReg_OUT     ; Stuck at GND due to stuck port data_in                ;
+; MEMWB_REG:DUT_MEM_WB_REG|MEM_WB_DMEM_OUT[29..31] ; Stuck at GND due to stuck port data_in                ;
+; Total Number of Removed Registers = 34           ;                                                       ;
++--------------------------------------------------+-------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1382  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1090  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |P3_top|PC:DUT_PC|PC_OUT[0]                            ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |P3_top|PC:DUT_PC|PC_OUT[31]                           ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 78 LEs               ; 0 LEs                  ; Yes        ; |P3_top|PC:DUT_PC|PC_OUT[19]                           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |P3_top|CTRL_UNIT:DUT_CTRL_UNIT|ALUSrc                 ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 128 LEs              ; 32 LEs                 ; No         ; |P3_top|ALU:DUT_ALU|Mux18                              ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |P3_top|REG_DST_MUX:DUT_RegDst_MUX|RegDst_OUT[4]       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |P3_top|CTRL_UNIT:DUT_CTRL_UNIT|Jump                   ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |P3_top|MUX3:DUT_ALU_IN0_MUX|OUTPUT[11]                ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |P3_top|REGISTERS:DUT_REG|MUX32:DUT_READREG2_MUX|Mux31 ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |P3_top|REGISTERS:DUT_REG|MUX32:DUT_READREG1_MUX|Mux13 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Source assignments for IMEM:DUT_IMEM|altsyncram:altsyncram_component|altsyncram_jvp3:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------+
+; Assignment                      ; Value              ; From ; To                                    ;
++---------------------------------+--------------------+------+---------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
++---------------------------------+--------------------+------+---------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: EXMEM_REG:DUT_EX_MEM_REG ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; word_width     ; 32    ; Signed Integer                               ;
+; addr_width     ; 5     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IMEM:DUT_IMEM|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------+
+; Parameter Name                     ; Value                ; Type                           ;
++------------------------------------+----------------------+--------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                        ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                        ;
+; WIDTH_A                            ; 32                   ; Signed Integer                 ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                 ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WIDTH_B                            ; 1                    ; Signed Integer                 ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                 ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                        ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; OLD_DATA             ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; INIT_FILE                          ; IMEM.mif             ; Untyped                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                 ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_jvp3      ; Untyped                        ;
++------------------------------------+----------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; word_width     ; 32    ; Signed Integer                        ;
+; addr_width     ; 5     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:0:REGX ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:1:REGX ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:2:REGX ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:3:REGX ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:4:REGX ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:5:REGX ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:6:REGX ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:7:REGX ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:8:REGX ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:9:REGX ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:10:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:11:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:12:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:13:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:14:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:15:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:16:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:17:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:18:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:19:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:20:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:21:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:22:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:23:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:24:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:25:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:26:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:27:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:28:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:29:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:30:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|GEN_REG:\GEN_INS:31:REGX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|MUX32:DUT_READREG1_MUX ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|MUX32:DUT_READREG2_MUX ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:DUT_REG|DECODER:DUT_DECODER ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PL_ALU_CTRL:DUT_ALU_CONTROL ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:DUT_ALU ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; word_width     ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUX3:DUT_ALU_IN0_MUX ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; word_width     ; 32    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUX2:DUT_ALU_IN1_MUX ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; n              ; 32    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SEX:DUT_SEX ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; word_width     ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PL_WB_MUX:DUT_WB_MUX ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; word_width     ; 32    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BRANCH_ADDER:DUT_BRANCH_ADDER ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; word_width     ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUX2:DUT_JUMP_MUX ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; n              ; 32    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REG_DST_MUX:DUT_RegDst_MUX ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; addr_width     ; 5     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PC:DUT_PC ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; word_width     ; 32    ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                          ;
++-------------------------------------------+-----------------------------------------------+
+; Name                                      ; Value                                         ;
++-------------------------------------------+-----------------------------------------------+
+; Number of entity instances                ; 1                                             ;
+; Entity Instance                           ; IMEM:DUT_IMEM|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                   ;
+;     -- WIDTH_A                            ; 32                                            ;
+;     -- NUMWORDS_A                         ; 256                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                  ;
+;     -- WIDTH_B                            ; 1                                             ;
+;     -- NUMWORDS_B                         ; 0                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                     ;
++-------------------------------------------+-----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CREATE_STALL:DUT_STALL"                                                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; jump_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "PC_ADD4:DUT_PC_ADD4" ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; const4[31..3] ; Input ; Info     ; Stuck at GND ;
+; const4[1..0]  ; Input ; Info     ; Stuck at GND ;
+; const4[2]     ; Input ; Info     ; Stuck at VCC ;
++---------------+-------+----------+--------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "BRANCH_ADDER:DUT_BRANCH_ADDER" ;
++-----------+-------+----------+----------------------------+
+; Port      ; Type  ; Severity ; Details                    ;
++-----------+-------+----------+----------------------------+
+; in1[1..0] ; Input ; Info     ; Stuck at GND               ;
++-----------+-------+----------+----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MEMWB_REG:DUT_MEM_WB_REG"                                                                          ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; mem_wb_pc_out       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mem_wb_writereg_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "EXMEM_REG:DUT_EX_MEM_REG"                                                                         ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; ex_mem_alu_ovf_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DEEX_REG:DUT_DE_EX_REG"                                                                               ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                   ; Type   ; Severity ; Details                                                                             ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; de_ex_memwrite_out     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; de_ex_memwriteread_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; de_ex_alusrc_out       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 240                         ;
+; cycloneiii_ff         ; 1382                        ;
+;     ENA               ; 1090                        ;
+;     plain             ; 292                         ;
+; cycloneiii_lcell_comb ; 1936                        ;
+;     arith             ; 120                         ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 91                          ;
+;     normal            ; 1816                        ;
+;         0 data inputs ; 5                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 228                         ;
+;         4 data inputs ; 1573                        ;
+; cycloneiii_ram_block  ; 32                          ;
+;                       ;                             ;
+; Max LUT depth         ; 19.50                       ;
+; Average LUT depth     ; 12.43                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Apr 25 18:08:12 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off p3_top -c p3_top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file REG_DST_MUX.vhdl
+    Info (12022): Found design unit 1: REG_DST_MUX-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/REG_DST_MUX.vhdl Line: 41
+    Info (12023): Found entity 1: REG_DST_MUX File: /home/josh/school/ece4120/final_proj/p3pipeline/REG_DST_MUX.vhdl Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file PL_ALU_CTRL.vhdl
+    Info (12022): Found design unit 1: PL_ALU_CTRL-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl Line: 39
+    Info (12023): Found entity 1: PL_ALU_CTRL File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file PL_WB_MUX.vhdl
+    Info (12022): Found design unit 1: PL_WB_MUX-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_WB_MUX.vhdl Line: 41
+    Info (12023): Found entity 1: PL_WB_MUX File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_WB_MUX.vhdl Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file PL_BRANCH_MUX.vhdl
+    Info (12022): Found design unit 1: PL_BRANCH_MUX-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_BRANCH_MUX.vhdl Line: 39
+    Info (12023): Found entity 1: PL_BRANCH_MUX File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_BRANCH_MUX.vhdl Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file MEMWB_REG.vhdl
+    Info (12022): Found design unit 1: MEMWB_REG-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/MEMWB_REG.vhdl Line: 44
+    Info (12023): Found entity 1: MEMWB_REG File: /home/josh/school/ece4120/final_proj/p3pipeline/MEMWB_REG.vhdl Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file EXMEM_REG.vhdl
+    Info (12022): Found design unit 1: EXMEM_REG-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/EXMEM_REG.vhdl Line: 53
+    Info (12023): Found entity 1: EXMEM_REG File: /home/josh/school/ece4120/final_proj/p3pipeline/EXMEM_REG.vhdl Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file DEEX_REG.vhdl
+    Info (12022): Found design unit 1: DEEX_REG-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/DEEX_REG.vhdl Line: 65
+    Info (12023): Found entity 1: DEEX_REG File: /home/josh/school/ece4120/final_proj/p3pipeline/DEEX_REG.vhdl Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file IFDE_REG.vhdl
+    Info (12022): Found design unit 1: IFDE_REG-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/IFDE_REG.vhdl Line: 36
+    Info (12023): Found entity 1: IFDE_REG File: /home/josh/school/ece4120/final_proj/p3pipeline/IFDE_REG.vhdl Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file CREATE_STALL.vhdl
+    Info (12022): Found design unit 1: CREATE_STALL-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl Line: 49
+    Info (12023): Found entity 1: CREATE_STALL File: /home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file HAZARD_UNIT.vhdl
+    Info (12022): Found design unit 1: HAZARD_UNIT-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/HAZARD_UNIT.vhdl Line: 36
+    Info (12023): Found entity 1: HAZARD_UNIT File: /home/josh/school/ece4120/final_proj/p3pipeline/HAZARD_UNIT.vhdl Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file BRANCH_ADDER.vhdl
+    Info (12022): Found design unit 1: BRANCH_ADDER-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/BRANCH_ADDER.vhdl Line: 36
+    Info (12023): Found entity 1: BRANCH_ADDER File: /home/josh/school/ece4120/final_proj/p3pipeline/BRANCH_ADDER.vhdl Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file MUX3.vhdl
+    Info (12022): Found design unit 1: MUX3-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 41
+    Info (12023): Found entity 1: MUX3 File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file AND2BIT.vhdl
+    Info (12022): Found design unit 1: AND2BIT-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/AND2BIT.vhdl Line: 31
+    Info (12023): Found entity 1: AND2BIT File: /home/josh/school/ece4120/final_proj/p3pipeline/AND2BIT.vhdl Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file DECODER.vhdl
+    Info (12022): Found design unit 1: DECODER-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/DECODER.vhdl Line: 35
+    Info (12023): Found entity 1: DECODER File: /home/josh/school/ece4120/final_proj/p3pipeline/DECODER.vhdl Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file MUX32.vhdl
+    Info (12022): Found design unit 1: MUX32-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX32.vhdl Line: 67
+    Info (12023): Found entity 1: MUX32 File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX32.vhdl Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file GEN_REG.vhdl
+    Info (12022): Found design unit 1: GEN_REG-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/GEN_REG.vhdl Line: 38
+    Info (12023): Found entity 1: GEN_REG File: /home/josh/school/ece4120/final_proj/p3pipeline/GEN_REG.vhdl Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file REGISTERS.vhdl
+    Info (12022): Found design unit 1: REGISTERS-structural File: /home/josh/school/ece4120/final_proj/p3pipeline/REGISTERS.vhdl Line: 41
+    Info (12023): Found entity 1: REGISTERS File: /home/josh/school/ece4120/final_proj/p3pipeline/REGISTERS.vhdl Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file REGWRITE.vhdl
+    Info (12022): Found design unit 1: REGWRITE-arch File: /home/josh/school/ece4120/final_proj/p3pipeline/REGWRITE.vhdl Line: 19
+    Info (12023): Found entity 1: REGWRITE File: /home/josh/school/ece4120/final_proj/p3pipeline/REGWRITE.vhdl Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file JUMP_SHIFT.vhdl
+    Info (12022): Found design unit 1: JUMP_SHIFT-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/JUMP_SHIFT.vhdl Line: 32
+    Info (12023): Found entity 1: JUMP_SHIFT File: /home/josh/school/ece4120/final_proj/p3pipeline/JUMP_SHIFT.vhdl Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file SL2.vhdl
+    Info (12022): Found design unit 1: SL2-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/SL2.vhdl Line: 31
+    Info (12023): Found entity 1: SL2 File: /home/josh/school/ece4120/final_proj/p3pipeline/SL2.vhdl Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file SEX.vhdl
+    Info (12022): Found design unit 1: SEX-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/SEX.vhdl Line: 28
+    Info (12023): Found entity 1: SEX File: /home/josh/school/ece4120/final_proj/p3pipeline/SEX.vhdl Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file PIPELINE_REG.vhdl
+    Info (12022): Found design unit 1: PIPELINE_REG-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/PIPELINE_REG.vhdl Line: 38
+    Info (12023): Found entity 1: PIPELINE_REG File: /home/josh/school/ece4120/final_proj/p3pipeline/PIPELINE_REG.vhdl Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file PC_ADD4.vhdl
+    Info (12022): Found design unit 1: PC_ADD4-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/PC_ADD4.vhdl Line: 34
+    Info (12023): Found entity 1: PC_ADD4 File: /home/josh/school/ece4120/final_proj/p3pipeline/PC_ADD4.vhdl Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file PC.vhdl
+    Info (12022): Found design unit 1: PC-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/PC.vhdl Line: 38
+    Info (12023): Found entity 1: PC File: /home/josh/school/ece4120/final_proj/p3pipeline/PC.vhdl Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file P3_top.vhdl
+    Info (12022): Found design unit 1: P3_top-structural File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 53
+    Info (12023): Found entity 1: P3_top File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file P3_tb.vhdl
+    Info (12022): Found design unit 1: P3_tb-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_tb.vhdl Line: 26
+    Info (12023): Found entity 1: P3_tb File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_tb.vhdl Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file MUX2.vhdl
+    Info (12022): Found design unit 1: MUX2-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 37
+    Info (12023): Found entity 1: MUX2 File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file FWD_UNIT.vhdl
+    Info (12022): Found design unit 1: FWD_UNIT-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/FWD_UNIT.vhdl Line: 40
+    Info (12023): Found entity 1: FWD_UNIT File: /home/josh/school/ece4120/final_proj/p3pipeline/FWD_UNIT.vhdl Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file CTRL_UNIT.vhdl
+    Info (12022): Found design unit 1: CTRL_UNIT-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/CTRL_UNIT.vhdl Line: 41
+    Info (12023): Found entity 1: CTRL_UNIT File: /home/josh/school/ece4120/final_proj/p3pipeline/CTRL_UNIT.vhdl Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file ALU_CTRL.vhdl
+    Info (12022): Found design unit 1: ALU_CTRL-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/ALU_CTRL.vhdl Line: 31
+    Info (12023): Found entity 1: ALU_CTRL File: /home/josh/school/ece4120/final_proj/p3pipeline/ALU_CTRL.vhdl Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file ALU.vhdl
+    Info (12022): Found design unit 1: ALU-behavioral File: /home/josh/school/ece4120/final_proj/p3pipeline/ALU.vhdl Line: 44
+    Info (12023): Found entity 1: ALU File: /home/josh/school/ece4120/final_proj/p3pipeline/ALU.vhdl Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file IMEM.vhd
+    Info (12022): Found design unit 1: imem-SYN File: /home/josh/school/ece4120/final_proj/p3pipeline/IMEM.vhd Line: 55
+    Info (12023): Found entity 1: IMEM File: /home/josh/school/ece4120/final_proj/p3pipeline/IMEM.vhd Line: 43
+Info (12127): Elaborating entity "p3_top" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at P3_top.vhdl(92): object "IF_DE_ALUOp_OUT" assigned a value but never read File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 92
+Warning (10036): Verilog HDL or VHDL warning at P3_top.vhdl(93): object "IF_DE_SHAMT_OUT" assigned a value but never read File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 93
+Warning (10036): Verilog HDL or VHDL warning at P3_top.vhdl(113): object "DE_EX_MemWrite_OUT" assigned a value but never read File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 113
+Warning (10036): Verilog HDL or VHDL warning at P3_top.vhdl(117): object "DE_EX_MemWriteRead_OUT" assigned a value but never read File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 117
+Warning (10036): Verilog HDL or VHDL warning at P3_top.vhdl(121): object "DE_EX_ALUSrc_OUT" assigned a value but never read File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 121
+Warning (10036): Verilog HDL or VHDL warning at P3_top.vhdl(152): object "EX_MEM_ALU_OVF_OUT" assigned a value but never read File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 152
+Warning (10036): Verilog HDL or VHDL warning at P3_top.vhdl(164): object "MEM_WB_PC_OUT" assigned a value but never read File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 164
+Warning (10541): VHDL Signal Declaration warning at P3_top.vhdl(175): used implicit default value for signal "MEM_WB_WriteReg_IN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 175
+Warning (10036): Verilog HDL or VHDL warning at P3_top.vhdl(176): object "MEM_WB_WriteReg_OUT" assigned a value but never read File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 176
+Warning (10541): VHDL Signal Declaration warning at P3_top.vhdl(191): used implicit default value for signal "IMEM_DATA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 191
+Warning (10541): VHDL Signal Declaration warning at P3_top.vhdl(192): used implicit default value for signal "IMEM_WREN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 192
+Warning (10540): VHDL Signal Declaration warning at P3_top.vhdl(290): used explicit default value for signal "CONST4" because signal was never assigned a value File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 290
+Warning (10541): VHDL Signal Declaration warning at P3_top.vhdl(304): used implicit default value for signal "DMEM_DATA_OUT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 304
+Warning (10036): Verilog HDL or VHDL warning at P3_top.vhdl(338): object "STALL_Jump_OUT" assigned a value but never read File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 338
+Warning (10492): VHDL Process Statement warning at P3_top.vhdl(885): signal "EX_MEM_ALU_ZFLG_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 885
+Warning (10492): VHDL Process Statement warning at P3_top.vhdl(885): signal "EX_MEM_Branch_OUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 885
+Info (12128): Elaborating entity "IFDE_REG" for hierarchy "IFDE_REG:DUT_IF_DE_REG" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 450
+Warning (10492): VHDL Process Statement warning at IFDE_REG.vhdl(54): signal "IF_DE_Write" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/IFDE_REG.vhdl Line: 54
+Info (12128): Elaborating entity "DEEX_REG" for hierarchy "DEEX_REG:DUT_DE_EX_REG" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 494
+Info (12128): Elaborating entity "EXMEM_REG" for hierarchy "EXMEM_REG:DUT_EX_MEM_REG" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 545
+Warning (10541): VHDL Signal Declaration warning at EXMEM_REG.vhdl(37): used implicit default value for signal "EX_MEM_Branch_OUT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/josh/school/ece4120/final_proj/p3pipeline/EXMEM_REG.vhdl Line: 37
+Warning (10541): VHDL Signal Declaration warning at EXMEM_REG.vhdl(44): used implicit default value for signal "EX_MEM_MemToReg_OUT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/josh/school/ece4120/final_proj/p3pipeline/EXMEM_REG.vhdl Line: 44
+Info (12128): Elaborating entity "MEMWB_REG" for hierarchy "MEMWB_REG:DUT_MEM_WB_REG" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 577
+Warning (10541): VHDL Signal Declaration warning at MEMWB_REG.vhdl(29): used implicit default value for signal "MEM_WB_PC_OUT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/josh/school/ece4120/final_proj/p3pipeline/MEMWB_REG.vhdl Line: 29
+Info (12128): Elaborating entity "IMEM" for hierarchy "IMEM:DUT_IMEM" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 603
+Info (12128): Elaborating entity "altsyncram" for hierarchy "IMEM:DUT_IMEM|altsyncram:altsyncram_component" File: /home/josh/school/ece4120/final_proj/p3pipeline/IMEM.vhd Line: 62
+Info (12130): Elaborated megafunction instantiation "IMEM:DUT_IMEM|altsyncram:altsyncram_component" File: /home/josh/school/ece4120/final_proj/p3pipeline/IMEM.vhd Line: 62
+Info (12133): Instantiated megafunction "IMEM:DUT_IMEM|altsyncram:altsyncram_component" with the following parameter: File: /home/josh/school/ece4120/final_proj/p3pipeline/IMEM.vhd Line: 62
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "IMEM.mif"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "OLD_DATA"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jvp3.tdf
+    Info (12023): Found entity 1: altsyncram_jvp3 File: /home/josh/school/ece4120/final_proj/p3pipeline/db/altsyncram_jvp3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_jvp3" for hierarchy "IMEM:DUT_IMEM|altsyncram:altsyncram_component|altsyncram_jvp3:auto_generated" File: /opt/intelFPGA/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "REGISTERS" for hierarchy "REGISTERS:DUT_REG" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 614
+Info (12128): Elaborating entity "AND2BIT" for hierarchy "REGISTERS:DUT_REG|AND2BIT:\GEN_INS:0:ANDX" File: /home/josh/school/ece4120/final_proj/p3pipeline/REGISTERS.vhdl Line: 65
+Info (12128): Elaborating entity "GEN_REG" for hierarchy "REGISTERS:DUT_REG|GEN_REG:\GEN_INS:0:REGX" File: /home/josh/school/ece4120/final_proj/p3pipeline/REGISTERS.vhdl Line: 71
+Warning (10492): VHDL Process Statement warning at GEN_REG.vhdl(57): signal "RegWrite" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/GEN_REG.vhdl Line: 57
+Info (12128): Elaborating entity "MUX32" for hierarchy "REGISTERS:DUT_REG|MUX32:DUT_READREG1_MUX" File: /home/josh/school/ece4120/final_proj/p3pipeline/REGISTERS.vhdl Line: 83
+Info (12128): Elaborating entity "DECODER" for hierarchy "REGISTERS:DUT_REG|DECODER:DUT_DECODER" File: /home/josh/school/ece4120/final_proj/p3pipeline/REGISTERS.vhdl Line: 164
+Warning (10492): VHDL Process Statement warning at DECODER.vhdl(61): signal "sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/DECODER.vhdl Line: 61
+Info (12128): Elaborating entity "CTRL_UNIT" for hierarchy "CTRL_UNIT:DUT_CTRL_UNIT" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 631
+Info (12128): Elaborating entity "PL_ALU_CTRL" for hierarchy "PL_ALU_CTRL:DUT_ALU_CONTROL" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 648
+Warning (10631): VHDL Process Statement warning at PL_ALU_CTRL.vhdl(56): inferring latch(es) for signal or variable "ALU_CONTROL", which holds its previous value in one or more paths through the process File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl Line: 56
+Info (10041): Inferred latch for "ALU_CONTROL[0]" at PL_ALU_CTRL.vhdl(56) File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl Line: 56
+Info (10041): Inferred latch for "ALU_CONTROL[1]" at PL_ALU_CTRL.vhdl(56) File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl Line: 56
+Info (10041): Inferred latch for "ALU_CONTROL[2]" at PL_ALU_CTRL.vhdl(56) File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl Line: 56
+Info (10041): Inferred latch for "ALU_CONTROL[3]" at PL_ALU_CTRL.vhdl(56) File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl Line: 56
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:DUT_ALU" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 664
+Info (12128): Elaborating entity "MUX3" for hierarchy "MUX3:DUT_ALU_IN0_MUX" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 673
+Warning (10631): VHDL Process Statement warning at MUX3.vhdl(58): inferring latch(es) for signal or variable "OUTPUT", which holds its previous value in one or more paths through the process File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[0]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[1]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[2]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[3]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[4]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[5]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[6]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[7]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[8]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[9]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[10]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[11]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[12]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[13]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[14]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[15]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[16]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[17]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[18]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[19]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[20]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[21]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[22]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[23]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[24]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[25]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[26]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[27]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[28]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[29]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[30]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (10041): Inferred latch for "OUTPUT[31]" at MUX3.vhdl(58) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Info (12128): Elaborating entity "MUX2" for hierarchy "MUX2:DUT_ALU_IN1_MUX" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 685
+Warning (10631): VHDL Process Statement warning at MUX2.vhdl(49): inferring latch(es) for signal or variable "OUTPUT", which holds its previous value in one or more paths through the process File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[0]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[1]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[2]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[3]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[4]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[5]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[6]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[7]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[8]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[9]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[10]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[11]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[12]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[13]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[14]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[15]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[16]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[17]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[18]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[19]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[20]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[21]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[22]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[23]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[24]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[25]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[26]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[27]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[28]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[29]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[30]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (10041): Inferred latch for "OUTPUT[31]" at MUX2.vhdl(49) File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl Line: 49
+Info (12128): Elaborating entity "SEX" for hierarchy "SEX:DUT_SEX" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 702
+Info (12128): Elaborating entity "PL_WB_MUX" for hierarchy "PL_WB_MUX:DUT_WB_MUX" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 720
+Info (12128): Elaborating entity "BRANCH_ADDER" for hierarchy "BRANCH_ADDER:DUT_BRANCH_ADDER" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 733
+Info (12128): Elaborating entity "PL_BRANCH_MUX" for hierarchy "PL_BRANCH_MUX:DUT_BRANCH_MUX" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 741
+Info (12128): Elaborating entity "JUMP_SHIFT" for hierarchy "JUMP_SHIFT:DUT_JUMP_SHIFT" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 775
+Info (12128): Elaborating entity "REG_DST_MUX" for hierarchy "REG_DST_MUX:DUT_RegDst_MUX" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 782
+Warning (10492): VHDL Process Statement warning at REG_DST_MUX.vhdl(66): signal "YP_SEL_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/REG_DST_MUX.vhdl Line: 66
+Info (12128): Elaborating entity "PC" for hierarchy "PC:DUT_PC" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 804
+Info (12128): Elaborating entity "PC_ADD4" for hierarchy "PC_ADD4:DUT_PC_ADD4" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 813
+Warning (10492): VHDL Process Statement warning at PC_ADD4.vhdl(52): signal "CONST4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/PC_ADD4.vhdl Line: 52
+Info (12128): Elaborating entity "HAZARD_UNIT" for hierarchy "HAZARD_UNIT:DUT_HAZARD" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 821
+Info (12128): Elaborating entity "FWD_UNIT" for hierarchy "FWD_UNIT:DUT_FWD" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 831
+Info (12128): Elaborating entity "CREATE_STALL" for hierarchy "CREATE_STALL:DUT_STALL" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 853
+Warning (10492): VHDL Process Statement warning at CREATE_STALL.vhdl(69): signal "RegDst_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl Line: 69
+Warning (10492): VHDL Process Statement warning at CREATE_STALL.vhdl(70): signal "Branch_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl Line: 70
+Warning (10492): VHDL Process Statement warning at CREATE_STALL.vhdl(71): signal "MemRead_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl Line: 71
+Warning (10492): VHDL Process Statement warning at CREATE_STALL.vhdl(72): signal "MemWrite_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl Line: 72
+Warning (10492): VHDL Process Statement warning at CREATE_STALL.vhdl(73): signal "MemToReg_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl Line: 73
+Warning (10492): VHDL Process Statement warning at CREATE_STALL.vhdl(74): signal "ALUOp_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl Line: 74
+Warning (10492): VHDL Process Statement warning at CREATE_STALL.vhdl(75): signal "ALUSrc_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl Line: 75
+Warning (10492): VHDL Process Statement warning at CREATE_STALL.vhdl(76): signal "RegWrite_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl Line: 76
+Warning (10492): VHDL Process Statement warning at CREATE_STALL.vhdl(77): signal "Jump_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl Line: 77
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[31]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[30]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[29]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[28]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[27]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[26]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[25]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[24]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[23]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[22]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[21]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[20]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[19]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[18]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[17]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[16]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[15]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[14]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[13]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[12]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[11]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[10]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[9]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[8]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[7]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[6]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[5]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[4]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[3]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[2]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[1]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (14026): LATCH primitive "MUX3:DUT_ALU_IN0_MUX|OUTPUT[0]" is permanently enabled File: /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl Line: 58
+Warning (13012): Latch PL_ALU_CTRL:DUT_ALU_CONTROL|ALU_CONTROL[1] has unsafe behavior File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl Line: 56
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Pipeline File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 26
+Warning (13012): Latch PL_ALU_CTRL:DUT_ALU_CONTROL|ALU_CONTROL[0] has unsafe behavior File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl Line: 56
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Pipeline File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 26
+Warning (13012): Latch PL_ALU_CTRL:DUT_ALU_CONTROL|ALU_CONTROL[2] has unsafe behavior File: /home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl Line: 56
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Pipeline File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 26
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "MEM_WB_DMEM_Output[0]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[1]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[2]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[3]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[4]" is stuck at GND File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[5]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[6]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[7]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[8]" is stuck at GND File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[9]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[10]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[11]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[12]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[13]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[14]" is stuck at GND File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[15]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[16]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[17]" is stuck at GND File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[18]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[19]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[20]" is stuck at GND File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[21]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[22]" is stuck at GND File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[23]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[24]" is stuck at GND File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[25]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[26]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[27]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[28]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[29]" is stuck at GND File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[30]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "MEM_WB_DMEM_Output[31]" is stuck at VCC File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 33
+    Warning (13410): Pin "ALU_OperationOutput[3]" is stuck at GND File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 35
+    Warning (13410): Pin "MEM_WB_MemToReg_Output" is stuck at GND File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 36
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "RST" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 25
+    Warning (15610): No output dependent on input pin "BonusEnable" File: /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl Line: 27
+Info (21057): Implemented 3552 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 236 output pins
+    Info (21061): Implemented 3280 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 113 warnings
+    Info: Peak virtual memory: 462 megabytes
+    Info: Processing ended: Tue Apr 25 18:08:26 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:28
+
+

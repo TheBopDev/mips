@@ -1,0 +1,1243 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/josh/school/ece4120/final_proj/p3pipeline/simulation/modelsim
+Ealu
+Z1 w1682205220
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 23
+R0
+Z5 8/home/josh/school/ece4120/final_proj/p3pipeline/ALU.vhdl
+Z6 F/home/josh/school/ece4120/final_proj/p3pipeline/ALU.vhdl
+l0
+L25 1
+VS7F6hHDO<FCC`YGz=?WgV3
+!s100 R12L]AJi3n?Id46dJN0TD0
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1682349608
+!i10b 1
+Z9 !s108 1682349608.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/ALU.vhdl|
+Z11 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/ALU.vhdl|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 3 alu 0 22 S7F6hHDO<FCC`YGz=?WgV3
+!i122 23
+l55
+L44 57
+V9e;kQRnP7k>TLkhSg537Z0
+!s100 oe?=D5^Hz4IW7SGB[Z>ia0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eand2bit
+Z15 w1682200172
+R2
+R3
+R4
+!i122 12
+R0
+Z16 8/home/josh/school/ece4120/final_proj/p3pipeline/AND2BIT.vhdl
+Z17 F/home/josh/school/ece4120/final_proj/p3pipeline/AND2BIT.vhdl
+l0
+Z18 L18 1
+V5mTZ@b7ANT@>mYmb4gTU70
+!s100 eEnIS<j5H7LPA:68JH^QO3
+R7
+31
+Z19 !s110 1682349607
+!i10b 1
+Z20 !s108 1682349607.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/AND2BIT.vhdl|
+Z22 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/AND2BIT.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z23 DEx4 work 7 and2bit 0 22 5mTZ@b7ANT@>mYmb4gTU70
+!i122 12
+l40
+L31 18
+V;5e@GTRf@Vaf:MMS0jz4h0
+!s100 <X:<:]eQMQeTTD=mf1R8X1
+R7
+31
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Ebranch_adder
+Z24 w1682203780
+R2
+R3
+R4
+!i122 10
+R0
+Z25 8/home/josh/school/ece4120/final_proj/p3pipeline/BRANCH_ADDER.vhdl
+Z26 F/home/josh/school/ece4120/final_proj/p3pipeline/BRANCH_ADDER.vhdl
+l0
+Z27 L19 1
+V7AkV5R^N63RKc@3O;I:k]3
+!s100 hZGmPLE>Dc1JFIVAPNJ3c2
+R7
+31
+R19
+!i10b 1
+R20
+Z28 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/BRANCH_ADDER.vhdl|
+Z29 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/BRANCH_ADDER.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z30 DEx4 work 12 branch_adder 0 22 7AkV5R^N63RKc@3O;I:k]3
+!i122 10
+l44
+L36 23
+VW]5dz2JL1MCJTd6d`Bl0b0
+!s100 :0IUcB1OXXTYAOK@XP00n0
+R7
+31
+R19
+!i10b 1
+R20
+R28
+R29
+!i113 1
+R12
+R13
+Ecreate_stall
+Z31 w1682315073
+R2
+R3
+R4
+!i122 8
+R0
+Z32 8/home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl
+Z33 F/home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl
+l0
+R27
+VVNZR_mgJI@g;KlU0>>G4S1
+!s100 gV<N`0SBWCHQIYo1SM^D61
+R7
+31
+R19
+!i10b 1
+R20
+Z34 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl|
+Z35 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/CREATE_STALL.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z36 DEx4 work 12 create_stall 0 22 VNZR_mgJI@g;KlU0>>G4S1
+!i122 8
+l58
+L49 44
+VoQ>`gRKW?m34^_Ez;Ynl?2
+!s100 `_7lChF6mZKKlKfR0PZ:^2
+R7
+31
+R19
+!i10b 1
+R20
+R34
+R35
+!i113 1
+R12
+R13
+Ectrl_unit
+Z37 w1682308543
+R2
+R3
+R4
+!i122 22
+R0
+Z38 8/home/josh/school/ece4120/final_proj/p3pipeline/CTRL_UNIT.vhdl
+Z39 F/home/josh/school/ece4120/final_proj/p3pipeline/CTRL_UNIT.vhdl
+l0
+R27
+VmoOUPl1Z8SL_LIcM3Fh9C3
+!s100 MVZ3:6GYcFoOQmCa5j[oa2
+R7
+31
+R8
+!i10b 1
+R9
+Z40 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/CTRL_UNIT.vhdl|
+Z41 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/CTRL_UNIT.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z42 DEx4 work 9 ctrl_unit 0 22 moOUPl1Z8SL_LIcM3Fh9C3
+!i122 22
+l51
+L41 103
+VfP1MVo@Ea>adlSABo2XFn1
+!s100 NE6TRe`W;M72Q1B:f3FBn1
+R7
+31
+R8
+!i10b 1
+R9
+R40
+R41
+!i113 1
+R12
+R13
+Edecoder
+Z43 w1682198960
+R2
+R3
+R4
+!i122 13
+R0
+Z44 8/home/josh/school/ece4120/final_proj/p3pipeline/DECODER.vhdl
+Z45 F/home/josh/school/ece4120/final_proj/p3pipeline/DECODER.vhdl
+l0
+Z46 L20 1
+VjP>TlO65ahz_^<bL]kIk50
+!s100 ^V]kzc?4Bem7TJ582Bk]70
+R7
+31
+R19
+!i10b 1
+R20
+Z47 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/DECODER.vhdl|
+Z48 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/DECODER.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z49 DEx4 work 7 decoder 0 22 jP>TlO65ahz_^<bL]kIk50
+!i122 13
+l44
+L35 31
+VTTVb1KBPWE8F_fYF4bfiM1
+!s100 ?;30TfBTbRd38_I47Qg2M1
+R7
+31
+R19
+!i10b 1
+R20
+R47
+R48
+!i113 1
+R12
+R13
+Edeex_reg
+Z50 w1682316279
+R2
+R3
+R4
+!i122 6
+R0
+Z51 8/home/josh/school/ece4120/final_proj/p3pipeline/DEEX_REG.vhdl
+Z52 F/home/josh/school/ece4120/final_proj/p3pipeline/DEEX_REG.vhdl
+l0
+R46
+VU]20l4BFG50IZZe0nX?gK2
+!s100 ]lLZh=Z98i8dBnEH<2m5W0
+R7
+31
+R19
+!i10b 1
+R20
+Z53 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/DEEX_REG.vhdl|
+Z54 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/DEEX_REG.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z55 DEx4 work 8 deex_reg 0 22 U]20l4BFG50IZZe0nX?gK2
+!i122 6
+l74
+L65 43
+V8H>KhGXYVZ6;^zfCfhG1I1
+!s100 ?dDE1>Dk:EN1>3BQdIHTl3
+R7
+31
+R19
+!i10b 1
+R20
+R53
+R54
+!i113 1
+R12
+R13
+Eexmem_reg
+Z56 w1682318021
+R2
+R3
+R4
+!i122 5
+R0
+Z57 8/home/josh/school/ece4120/final_proj/p3pipeline/EXMEM_REG.vhdl
+Z58 F/home/josh/school/ece4120/final_proj/p3pipeline/EXMEM_REG.vhdl
+l0
+R27
+VD<PHeVj<aY:Q:3<goG3Kd2
+!s100 Vn3;aoEV23MM;;O]J@F:=2
+R7
+31
+R19
+!i10b 1
+R20
+Z59 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/EXMEM_REG.vhdl|
+Z60 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/EXMEM_REG.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z61 DEx4 work 9 exmem_reg 0 22 D<PHeVj<aY:Q:3<goG3Kd2
+!i122 5
+l62
+L53 34
+Vf5F[mjH1^ZNBhjJdE9[_Z2
+!s100 <X81?^Jz59@mXD:bHYa_U1
+R7
+31
+R19
+!i10b 1
+R20
+R59
+R60
+!i113 1
+R12
+R13
+Efwd_unit
+Z62 w1682208313
+R2
+R3
+R4
+!i122 21
+R0
+Z63 8/home/josh/school/ece4120/final_proj/p3pipeline/FWD_UNIT.vhdl
+Z64 F/home/josh/school/ece4120/final_proj/p3pipeline/FWD_UNIT.vhdl
+l0
+Z65 L22 1
+Vi`Ge`zFl<OOXkc5Q9lc7S2
+!s100 ZQm>:o7fcf?B^ERR0<JZJ1
+R7
+31
+R8
+!i10b 1
+R9
+Z66 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/FWD_UNIT.vhdl|
+Z67 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/FWD_UNIT.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z68 DEx4 work 8 fwd_unit 0 22 i`Ge`zFl<OOXkc5Q9lc7S2
+!i122 21
+l48
+L40 41
+V_lXI<NJ?XQ8cAmCEHA29Q0
+!s100 8CU2k7:_::4>H`i<ZGKU?2
+R7
+31
+R8
+!i10b 1
+R9
+R66
+R67
+!i113 1
+R12
+R13
+Egen_reg
+Z69 w1682185125
+R2
+R3
+R4
+!i122 15
+R0
+Z70 8/home/josh/school/ece4120/final_proj/p3pipeline/GEN_REG.vhdl
+Z71 F/home/josh/school/ece4120/final_proj/p3pipeline/GEN_REG.vhdl
+l0
+R46
+VTIki:jN0;CEXOgETn[U6i3
+!s100 ]^bU@RmgJAB33znL<BcUD0
+R7
+31
+R8
+!i10b 1
+R20
+Z72 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/GEN_REG.vhdl|
+Z73 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/GEN_REG.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z74 DEx4 work 7 gen_reg 0 22 TIki:jN0;CEXOgETn[U6i3
+!i122 15
+l47
+Z75 L38 26
+VBii9LQf:9NGoCIBRH1AlL1
+!s100 E5z=l7NkLETkShMUc70hI2
+R7
+31
+R8
+!i10b 1
+R20
+R72
+R73
+!i113 1
+R12
+R13
+Ehazard_unit
+Z76 w1682319056
+R2
+R3
+R4
+!i122 9
+R0
+Z77 8/home/josh/school/ece4120/final_proj/p3pipeline/HAZARD_UNIT.vhdl
+Z78 F/home/josh/school/ece4120/final_proj/p3pipeline/HAZARD_UNIT.vhdl
+l0
+R27
+V8Gcgz0Sa6QO^d9EYY_?`D3
+!s100 8HSLNDg4Umngj1o`hNUR?3
+R7
+31
+R19
+!i10b 1
+R20
+Z79 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/HAZARD_UNIT.vhdl|
+Z80 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/HAZARD_UNIT.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z81 DEx4 work 11 hazard_unit 0 22 8Gcgz0Sa6QO^d9EYY_?`D3
+!i122 9
+l45
+L36 33
+Vz0o1NoMVD7eJ]4CkD9;GP3
+!s100 E^:b10P13zLe0ML9CT_@A3
+R7
+31
+R19
+!i10b 1
+R20
+R79
+R80
+!i113 1
+R12
+R13
+Eifde_reg
+Z82 w1682301606
+R2
+R3
+R4
+!i122 7
+R0
+Z83 8/home/josh/school/ece4120/final_proj/p3pipeline/IFDE_REG.vhdl
+Z84 F/home/josh/school/ece4120/final_proj/p3pipeline/IFDE_REG.vhdl
+l0
+R27
+V0z[GfEVz_dYnMf651J3k@1
+!s100 @Q15>`T7ikR?=@B4MUoHf0
+R7
+31
+R19
+!i10b 1
+R20
+Z85 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/IFDE_REG.vhdl|
+Z86 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/IFDE_REG.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z87 DEx4 work 8 ifde_reg 0 22 0z[GfEVz_dYnMf651J3k@1
+!i122 7
+l45
+L36 26
+V`Pj5eBmDPKQMHZZ0@S2Ao1
+!s100 EFjlBRGRSWT1X9NXJZO=[2
+R7
+31
+R19
+!i10b 1
+R20
+R85
+R86
+!i113 1
+R12
+R13
+Eimem
+Z88 w1682178994
+Z89 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+R3
+R4
+!i122 24
+R0
+Z90 8/home/josh/school/ece4120/final_proj/p3pipeline/IMEM.vhd
+Z91 F/home/josh/school/ece4120/final_proj/p3pipeline/IMEM.vhd
+l0
+L43 1
+VBkRXe:P1AjnfP8FCCmheo0
+!s100 zm08l;Y8;e2e2B0ZMPB332
+R7
+31
+R8
+!i10b 1
+R9
+Z92 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/IMEM.vhd|
+Z93 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/IMEM.vhd|
+!i113 1
+R12
+R13
+Asyn
+R89
+R3
+R4
+Z94 DEx4 work 4 imem 0 22 BkRXe:P1AjnfP8FCCmheo0
+!i122 24
+l59
+L55 36
+VHm[;oO@Pl6?jiNgeclC4T3
+!s100 ?1:J`UXMh8EzWZCIMf@Xk0
+R7
+31
+R8
+!i10b 1
+R9
+R92
+R93
+!i113 1
+R12
+R13
+Ejump_shift
+Z95 w1682176170
+R2
+R3
+R4
+!i122 16
+R0
+Z96 8/home/josh/school/ece4120/final_proj/p3pipeline/JUMP_SHIFT.vhdl
+Z97 F/home/josh/school/ece4120/final_proj/p3pipeline/JUMP_SHIFT.vhdl
+l0
+R46
+VAX]cCPadX4MA?WajczV3K2
+!s100 Sih<IFkzQWI0_nln@h1KL1
+R7
+31
+R8
+!i10b 1
+R9
+Z98 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/JUMP_SHIFT.vhdl|
+Z99 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/JUMP_SHIFT.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z100 DEx4 work 10 jump_shift 0 22 AX]cCPadX4MA?WajczV3K2
+!i122 16
+l41
+L32 19
+VP0GzhN0O=@kf]bRKf4;l[2
+!s100 C<K:6AZeGAHEbODKSONjl1
+R7
+31
+R8
+!i10b 1
+R9
+R98
+R99
+!i113 1
+R12
+R13
+Ememwb_reg
+Z101 w1682281658
+R2
+R3
+R4
+!i122 4
+R0
+Z102 8/home/josh/school/ece4120/final_proj/p3pipeline/MEMWB_REG.vhdl
+Z103 F/home/josh/school/ece4120/final_proj/p3pipeline/MEMWB_REG.vhdl
+l0
+R27
+ViPRl;lO=>9zb<RJ>ePUMd2
+!s100 QoeeYFk5TVe`cbJQ@7IO42
+R7
+31
+R19
+!i10b 1
+R20
+Z104 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/MEMWB_REG.vhdl|
+Z105 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/MEMWB_REG.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z106 DEx4 work 9 memwb_reg 0 22 iPRl;lO=>9zb<RJ>ePUMd2
+!i122 4
+l53
+L44 32
+VaO1E=A@71NFh5W^fmT4oD0
+!s100 nWza9cR3lTH]mF94fY6B]0
+R7
+31
+R19
+!i10b 1
+R20
+R104
+R105
+!i113 1
+R12
+R13
+Emux2
+Z107 w1682176705
+R2
+R3
+R4
+!i122 20
+R0
+Z108 8/home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl
+Z109 F/home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl
+l0
+R27
+VLMA2;9nWa9Y6HYLdbi=`M0
+!s100 blC26hOZEg5m0Z_ihY9;72
+R7
+31
+R8
+!i10b 1
+R9
+Z110 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl|
+Z111 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/MUX2.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z112 DEx4 work 4 mux2 0 22 LMA2;9nWa9Y6HYLdbi=`M0
+!i122 20
+l46
+L37 22
+VeQT5hFFC:7^UO>Na?6BK43
+!s100 cG:RTTh``h]3F7SoEb_Je3
+R7
+31
+R8
+!i10b 1
+R9
+R110
+R111
+!i113 1
+R12
+R13
+Emux3
+Z113 w1682303623
+R2
+R3
+R4
+!i122 11
+R0
+Z114 8/home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl
+Z115 F/home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl
+l0
+R46
+VaZz9K[0aX<@h=X6Lcn<7L2
+!s100 QKo8BzN4fS;eV:ClKjMcI3
+R7
+31
+R19
+!i10b 1
+R20
+Z116 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl|
+Z117 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/MUX3.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z118 DEx4 work 4 mux3 0 22 aZz9K[0aX<@h=X6Lcn<7L2
+!i122 11
+l50
+L41 30
+VCY`V[`amfc<dDR^eMjeeI2
+!s100 Pg_YhZag8XEScDz:_:kBU0
+R7
+31
+R19
+!i10b 1
+R20
+R116
+R117
+!i113 1
+R12
+R13
+Emux32
+Z119 w1682200244
+R2
+R3
+R4
+!i122 14
+R0
+Z120 8/home/josh/school/ece4120/final_proj/p3pipeline/MUX32.vhdl
+Z121 F/home/josh/school/ece4120/final_proj/p3pipeline/MUX32.vhdl
+l0
+R27
+VedT_>J;Q5>X4cIoX4]^zB0
+!s100 =78]X`l;YEiR6TH=n^faL2
+R7
+31
+R19
+!i10b 1
+R20
+Z122 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/MUX32.vhdl|
+Z123 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/MUX32.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z124 DEx4 work 5 mux32 0 22 edT_>J;Q5>X4cIoX4]^zB0
+!i122 14
+l76
+L67 61
+VbSK8;C`HYELi4mjg:a?Xo1
+!s100 GkiK:^NC=1WkXT>J7A_f`2
+R7
+31
+R19
+!i10b 1
+R20
+R122
+R123
+!i113 1
+R12
+R13
+Ep3_tb
+Z125 w1682349512
+R2
+R3
+R4
+!i122 27
+R0
+Z126 8/home/josh/school/ece4120/final_proj/p3pipeline/P3_tb.vhdl
+Z127 F/home/josh/school/ece4120/final_proj/p3pipeline/P3_tb.vhdl
+l0
+R18
+V5:aadjLI]k[9E3ZAMDcjK2
+!s100 ^6jaT:]fFoz1=WB5MH3lO2
+R7
+31
+R8
+!i10b 1
+R9
+Z128 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/P3_tb.vhdl|
+!s107 /home/josh/school/ece4120/final_proj/p3pipeline/P3_tb.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+Z129 DEx4 work 6 p3_top 0 22 cLzLQ18gbF8n7FkY@iZ:Y2
+R2
+R3
+R4
+DEx4 work 5 p3_tb 0 22 5:aadjLI]k[9E3ZAMDcjK2
+!i122 27
+l58
+L26 68
+VoDNV9kGBBBTZnBaPCXUK=0
+!s100 R8<F;E0db8zJ=j:`aemn60
+R7
+31
+R8
+!i10b 1
+R9
+R128
+Z130 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/P3_tb.vhdl|
+!i113 1
+R12
+R13
+Ep3_top
+Z131 w1682322593
+R2
+R3
+R4
+!i122 26
+R0
+Z132 8/home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl
+Z133 F/home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl
+l0
+R65
+VcLzLQ18gbF8n7FkY@iZ:Y2
+!s100 F;;2V2IZQR=V]XV0DVZH_2
+R7
+31
+R8
+!i10b 1
+R9
+Z134 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl|
+Z135 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/P3_top.vhdl|
+!i113 1
+R12
+R13
+Astructural
+R36
+R68
+R81
+Z136 DEx4 work 7 pc_add4 0 22 ZfMYoeZ>YPWci:DbmAed?2
+Z137 DEx4 work 2 pc 0 22 J4H^L=RK82SF9E:TaYI4m2
+Z138 DEx4 work 11 reg_dst_mux 0 22 zl=[bhgN:iW^7dIK4DPaT3
+R100
+Z139 DEx4 work 13 pl_branch_mux 0 22 bNLd<Qn@GUf0U;IW0RRiJ3
+R30
+Z140 DEx4 work 9 pl_wb_mux 0 22 LdhJ]lo_70]dGP^;Qf_S12
+Z141 DEx4 work 3 sex 0 22 il?ZV6O=BH4GlcP:WQ<zZ0
+R112
+R118
+R14
+Z142 DEx4 work 11 pl_alu_ctrl 0 22 NE7lKCR7fe217H00141nO2
+R42
+Z143 DEx4 work 9 registers 0 22 ?_L[9Z4I6gGX80ZB`X2>Z1
+R89
+R94
+R106
+R61
+R55
+R87
+R2
+R3
+R4
+R129
+!i122 26
+l343
+L53 841
+VUaP[9U7OC]HfZFKzK_;M51
+!s100 2dlU6o9UR10IQU0j<FTjD3
+R7
+31
+R8
+!i10b 1
+R9
+R134
+R135
+!i113 1
+R12
+R13
+Epc
+Z144 w1682319170
+R2
+R3
+R4
+!i122 19
+R0
+Z145 8/home/josh/school/ece4120/final_proj/p3pipeline/PC.vhdl
+Z146 F/home/josh/school/ece4120/final_proj/p3pipeline/PC.vhdl
+l0
+R46
+VJ4H^L=RK82SF9E:TaYI4m2
+!s100 Ve0B2dM3`5H2fciJjR0kh2
+R7
+31
+R8
+!i10b 1
+R9
+Z147 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/PC.vhdl|
+Z148 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/PC.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+R137
+!i122 19
+l47
+R75
+VfgJ@DlNnjWXo;dFgH=VQ?3
+!s100 ^V36Dbjoc@0DfRj4@D9d53
+R7
+31
+R8
+!i10b 1
+R9
+R147
+R148
+!i113 1
+R12
+R13
+Epc_add4
+Z149 w1681912943
+R2
+R3
+R4
+!i122 18
+R0
+Z150 8/home/josh/school/ece4120/final_proj/p3pipeline/PC_ADD4.vhdl
+Z151 F/home/josh/school/ece4120/final_proj/p3pipeline/PC_ADD4.vhdl
+l0
+L21 1
+VZfMYoeZ>YPWci:DbmAed?2
+!s100 oOK5[iR5adi9^S2cHWGSP1
+R7
+31
+R8
+!i10b 1
+R9
+Z152 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/PC_ADD4.vhdl|
+Z153 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/PC_ADD4.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+R136
+!i122 18
+l43
+L34 23
+VP25=3`_>O54BHdJX=CJFN1
+!s100 ji]zW`5FnQj5>Q`T>cFCf3
+R7
+31
+R8
+!i10b 1
+R9
+R152
+R153
+!i113 1
+R12
+R13
+Epl_alu_ctrl
+Z154 w1682306545
+R2
+R3
+R4
+!i122 1
+R0
+Z155 8/home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl
+Z156 F/home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl
+l0
+R27
+VNE7lKCR7fe217H00141nO2
+!s100 k7NUhFdhZS7VFDQO4YNM02
+R7
+31
+R19
+!i10b 1
+R20
+Z157 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl|
+Z158 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/PL_ALU_CTRL.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+R142
+!i122 1
+l48
+L39 47
+VE7DN^V654oJiWK4d0:WEA1
+!s100 WSAYH=ezi1oo6VoPS3:l>3
+R7
+31
+R19
+!i10b 1
+R20
+R157
+R158
+!i113 1
+R12
+R13
+Epl_branch_mux
+Z159 w1682288042
+R2
+R3
+R4
+!i122 3
+R0
+Z160 8/home/josh/school/ece4120/final_proj/p3pipeline/PL_BRANCH_MUX.vhdl
+Z161 F/home/josh/school/ece4120/final_proj/p3pipeline/PL_BRANCH_MUX.vhdl
+l0
+R46
+VbNLd<Qn@GUf0U;IW0RRiJ3
+!s100 :;5]dD9EFC@hZ6gbQC[nA2
+R7
+31
+R19
+!i10b 1
+R20
+Z162 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/PL_BRANCH_MUX.vhdl|
+Z163 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/PL_BRANCH_MUX.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+R139
+!i122 3
+l48
+L39 34
+Vb6MWz?:VdmKC2]bg2a9iK1
+!s100 ^dZ85M0[aDFfm2RjikjBh3
+R7
+31
+R19
+!i10b 1
+R20
+R162
+R163
+!i113 1
+R12
+R13
+Epl_wb_mux
+Z164 w1682288535
+R2
+R3
+R4
+!i122 2
+R0
+Z165 8/home/josh/school/ece4120/final_proj/p3pipeline/PL_WB_MUX.vhdl
+Z166 F/home/josh/school/ece4120/final_proj/p3pipeline/PL_WB_MUX.vhdl
+l0
+R46
+VLdhJ]lo_70]dGP^;Qf_S12
+!s100 QHW<`EF7IYNHa7Sn40[Pa0
+R7
+31
+R19
+!i10b 1
+R20
+Z167 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/PL_WB_MUX.vhdl|
+Z168 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/PL_WB_MUX.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+R140
+!i122 2
+l50
+Z169 L41 33
+Vem;D6DoHIUJ`gjcc<Mk[O3
+!s100 ]?F1MnjPO=BEDQeX7;l_K2
+R7
+31
+R19
+!i10b 1
+R20
+R167
+R168
+!i113 1
+R12
+R13
+Ereg_dst_mux
+Z170 w1682321648
+R2
+R3
+R4
+!i122 0
+R0
+Z171 8/home/josh/school/ece4120/final_proj/p3pipeline/REG_DST_MUX.vhdl
+Z172 F/home/josh/school/ece4120/final_proj/p3pipeline/REG_DST_MUX.vhdl
+l0
+R27
+Vzl=[bhgN:iW^7dIK4DPaT3
+!s100 [f_Pjhd<KmGPiH8dKOkCh0
+R7
+31
+R19
+!i10b 1
+R20
+Z173 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/REG_DST_MUX.vhdl|
+Z174 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/REG_DST_MUX.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+R138
+!i122 0
+l50
+R169
+VUaa_<nf]L;[A;OGhJPHg@2
+!s100 ELeJ1LmU4[IbGn^Sm@oBl3
+R7
+31
+R19
+!i10b 1
+R20
+R173
+R174
+!i113 1
+R12
+R13
+Eregisters
+Z175 w1682200154
+R2
+R3
+R4
+!i122 25
+R0
+Z176 8/home/josh/school/ece4120/final_proj/p3pipeline/REGISTERS.vhdl
+Z177 F/home/josh/school/ece4120/final_proj/p3pipeline/REGISTERS.vhdl
+l0
+R18
+V?_L[9Z4I6gGX80ZB`X2>Z1
+!s100 jjjbLLfL_1e;`TI5[MKKM0
+R7
+31
+R8
+!i10b 1
+R9
+Z178 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/REGISTERS.vhdl|
+Z179 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/REGISTERS.vhdl|
+!i113 1
+R12
+R13
+Astructural
+R49
+R124
+R74
+R23
+R2
+R3
+R4
+R143
+!i122 25
+l56
+L41 129
+V7dTZ1]5;g^ZYWAaAb]z9a0
+!s100 Kc?TZ4_hLAnJSa5:84BD^3
+R7
+31
+R8
+!i10b 1
+R9
+R178
+R179
+!i113 1
+R12
+R13
+Esex
+Z180 w1682318413
+R2
+R3
+R4
+!i122 17
+R0
+Z181 8/home/josh/school/ece4120/final_proj/p3pipeline/SEX.vhdl
+Z182 F/home/josh/school/ece4120/final_proj/p3pipeline/SEX.vhdl
+l0
+L14 1
+Vil?ZV6O=BH4GlcP:WQ<zZ0
+!s100 :FmlT]i2aC[4_^mL8JCd`2
+R7
+31
+R8
+!i10b 1
+R9
+Z183 !s90 -reportprogress|300|-93|-work|work|/home/josh/school/ece4120/final_proj/p3pipeline/SEX.vhdl|
+Z184 !s107 /home/josh/school/ece4120/final_proj/p3pipeline/SEX.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+R141
+!i122 17
+l29
+L28 17
+VoXYPCfVz=e2eBgc7N386;3
+!s100 06Ci3F6zmOa6[41J>WATW0
+R7
+31
+R8
+!i10b 1
+R9
+R183
+R184
+!i113 1
+R12
+R13
